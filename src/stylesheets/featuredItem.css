@@ -1,0 +1,12 @@
+.featured__carousel {
+    width: 1200px;
+    height: 100%;
+    margin: 20px auto 0px auto;
+    z-index: 0;
+}
+
+.featured__item--img {
+    width: 500px;
+    height: 360px;
+    margin: 0;
+}
