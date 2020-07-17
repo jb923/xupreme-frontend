@@ -19,7 +19,7 @@
     margin-right: 12px;
     text-decoration: none;
     color: black;
-    padding: 4px;
+    /* padding: 1px; */
 }
 
 .navlower:hover {
@@ -39,7 +39,7 @@
     margin-right: 12px;
     text-decoration: none;
     color: black;
-    padding: 4px;
+    /* padding: 1px; */
 }
 
 .navupper:hover {
