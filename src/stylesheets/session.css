@@ -1,0 +1,90 @@
+.login__header {
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    margin-top: 24px;
+}
+
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+.form__input {
+    padding: 8px;
+    margin: 16px;
+    width: 100%;
+}
+
+.form__button {
+    width: 80%;
+    padding: 4px;
+    margin: 8px;
+}
+
+.form__button:hover {
+    background-color: #ED1C24;
+    color: #ffffff;
+}
+
+.demo__button {
+    width: 80%;
+    padding: 4px;
+    margin: 8px;
+}
+
+.demo__button:hover {
+    background-color: #ED1C24;
+    color: #ffffff;
+}
+
+.signup__link {
+    padding: 4px;
+    margin: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.signup__link:hover {
+    color: #ED1C24;
+}
+
+
+.signup__header {
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    margin-top: 24px;
+}
+
+.form__input-signup {
+    padding: 8px;
+    margin: 12px;
+    width: 100%;
+}
+
+.signupform__button {
+    width: 80%;
+    padding: 4px;
+    margin: 8px;
+}
+
+.signupform__button:hover {
+    background-color: #ED1C24;
+    color: #ffffff;
+}
+
+.login__link {
+    padding: 4px;
+    margin: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.login__link:hover {
+    color: #ED1C24;
+}

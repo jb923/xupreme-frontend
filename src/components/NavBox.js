@@ -8,7 +8,7 @@ const NavBox = props => {
 
     return (
         <div className="navbox__container">
-            <a className="navbox" href=''>login</a>
+            <a className="navbox" href='/login'>login</a>
             <a className="navbox" href=''>news</a>
             <a className="navbox" href='/shop'>shop</a>
             <a className="navbox" href=''>stores</a>

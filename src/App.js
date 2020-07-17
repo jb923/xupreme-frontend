@@ -3,11 +3,14 @@ import { connect } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
 import MainPage from './components/MainPage';
 import Shop from './components/Shop';
-import ViewAll from './components/ViewAll'
+import ViewAll from './components/ViewAll';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import "./stylesheets/header.css";
 import "./stylesheets/footer.css";
-import "./stylesheets/featuredItem.css"
-import "./stylesheets/navbars.css"
+import "./stylesheets/featuredItem.css";
+import "./stylesheets/navbars.css";
+import "./stylesheets/session.css";
 
 const App = props => {
   // useEffect(() => {
@@ -30,9 +33,11 @@ const App = props => {
 
   return (
       <BrowserRouter>
+          <Route path="/login" component={Login} />
           <Route exact path="/" component={MainPage} />
           <Route path="/shop" component={Shop} />
           <Route path="/all" component={ViewAll} />
+          <Route path="/signup" component={Signup} />
           {/* <Route path="/products/:productId" component={ProductPage} /> */}
           {/* <Route path="/cart" component={Cart} />
           <Route path="/category/:categoryId" component={ProductList} />

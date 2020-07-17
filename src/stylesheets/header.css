@@ -5,9 +5,13 @@ body {
     text-align: center;
 }
 
-.header__logo {
+.header__logo-main {
     margin-top: 250px;
     /* margin-right: 20px; */
+}
+
+.header__logo img {
+    margin-top: 150px;
 }
 
 .img__logo {
