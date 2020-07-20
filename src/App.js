@@ -6,11 +6,14 @@ import Shop from './components/Shop';
 import ViewAll from './components/ViewAll';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import News from './components/News';
+import About from './components/About';
 import "./stylesheets/header.css";
 import "./stylesheets/footer.css";
 import "./stylesheets/featuredItem.css";
 import "./stylesheets/navbars.css";
 import "./stylesheets/session.css";
+import "./stylesheets/news.css";
 
 const App = props => {
   // useEffect(() => {
@@ -38,6 +41,8 @@ const App = props => {
           <Route path="/shop" component={Shop} />
           <Route path="/all" component={ViewAll} />
           <Route path="/signup" component={Signup} />
+          <Route path="/news" component={News} />
+          <Route path="/about" component={About} />
           {/* <Route path="/products/:productId" component={ProductPage} /> */}
           {/* <Route path="/cart" component={Cart} />
           <Route path="/category/:categoryId" component={ProductList} />

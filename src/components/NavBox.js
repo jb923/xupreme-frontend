@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 
 
@@ -8,11 +8,11 @@ const NavBox = props => {
 
     return (
         <div className="navbox__container">
-            <a className="navbox" href='/login'>login</a>
-            <a className="navbox" href=''>news</a>
-            <a className="navbox" href='/shop'>shop</a>
-            <a className="navbox" href=''>stores</a>
-            <a className="navbox" href=''>about</a>
+            <NavLink className="navbox" to='/login'>login</NavLink>
+            <NavLink className="navbox" to='/news'>news</NavLink>
+            <NavLink className="navbox" to='/shop'>shop</NavLink>
+            <NavLink className="navbox" to=''>stores</NavLink>
+            <NavLink className="navbox" to='/about'>about</NavLink>
         </div>
     )
 }
