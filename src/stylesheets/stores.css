@@ -1,0 +1,30 @@
+.stores__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px;
+    margin-top: 72px;
+}
+
+.stores__img {
+    max-width: 210px;
+    max-height: 210px;
+    margin-right: 11px;
+}
+
+.stores p {
+    color: #ffffff;
+    text-align: left;
+    font-size: 13px;
+    overflow-wrap: normal;
+    max-width: 210px;
+    margin-right: 11px;
+}
+
+.stores__name {
+    margin-bottom: 24px;
+}
+
+.stores__address {
+    margin-top: -12px;
+}

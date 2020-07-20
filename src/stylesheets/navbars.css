@@ -39,10 +39,27 @@
     margin-right: 12px;
     text-decoration: none;
     color: black;
-    /* padding: 1px; */
 }
 
 .navupper:hover {
     background-color: #ED1C24;
     color: #ffffff;
+}
+
+.navmain__container {
+    display: flex;
+    justify-content: center;
+    margin: 48px;
+}
+
+.navmain {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    margin-right: 48px;
+    padding: 1px;
+}
+
+.navmain:hover {
+    background-color: #ED1C24;
 }

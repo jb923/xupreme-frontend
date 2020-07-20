@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import NavMain from './NavMain';
 
 
 const About = () => {
@@ -13,6 +14,7 @@ const About = () => {
                <p>While it developed into a downtown institution, Supreme established itself as a brand known for its quality, style, and authenticity.</p>
                <p>Over 25 years, Supreme has expanded from its New York City origins into a global community; working with generations of artists, photographers, designers, musicians, filmmakers, and writers who defied conventions and contributed to its unique identity and attitude.</p>
             </div>
+            <NavMain />
         </>
     )
 

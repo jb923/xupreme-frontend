@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import NavMain from './NavMain';
 
 
 const News = () => {
@@ -19,6 +20,7 @@ const News = () => {
                     <p>Available in Japan July 11th.</p>
                 </div>
             </div>
+            <NavMain />
         </>
     )
 
