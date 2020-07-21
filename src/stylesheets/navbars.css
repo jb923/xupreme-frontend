@@ -1,5 +1,5 @@
 .navlower__container {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,7 +18,8 @@
     font-size: 14px;
     margin-right: 14px;
     text-decoration: none;
-    color: black;
+    /* color: black; */
+    color: #ffffff;
     padding: 1px;
 }
 
@@ -28,7 +29,7 @@
 }
 
 .navupper__container {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -38,8 +39,9 @@
     font-size: 16px;
     margin-right: 12px;
     text-decoration: none;
-    color: black;
+    color: #ffffff;
     padding: 1px;
+    margin-top: 8px;
 }
 
 .navupper:hover {

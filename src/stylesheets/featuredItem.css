@@ -1,12 +1,33 @@
 .featured__carousel {
-    width: 1200px;
-    height: 100%;
-    margin: 20px auto 0px auto;
+    width: 1224px;
+    height: 400px;
+    margin: 75px auto 100px auto;
     z-index: 0;
+    background-color: #ffffff;
+    padding: 8px;
 }
 
-.featured__item--img {
-    /* width: ; */
+.carousel__list{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 4px;
+}
+
+
+.carousel__item--img {
+    width: 125%;
     height: 360px;
     margin: 0;
+    zoom: 100%;
+    padding: 4px;
+    margin-left: -35px;
+    transition: transform 4s;
+    transition-timing-function: ease-out;
+    filter: brightness(100%) ;
+
+}
+
+.carousel__item--img:hover {
+    transform: scale(1.1);
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux"
+import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 // import imageSelector from "../store/configureStore";
@@ -41,60 +42,42 @@ const FeaturedItem = (props) => {
             items: 2
         }
     };
+    if (props.products.length === 0) return null;
 
 
-    // if (Object.keys(props.products).length === 0) {
-    //     return null
-    // }
-    // if (props.products.length === 0) return null;
-
-    // let product1 = props.products[0]  // CanonE06
-    // let product2 = props.products[6]  //NikonD850
-    // let product3 = props.products[21] //LeicaM10
-    // let product4 = props.products[17] //FFT4
-    // let product5 = props.products[10] //Sonya7
-    // let product6 = props.products[1]  //CanonE05
-    // let product7 = props.products[12] //Olympus
-    // let product8 = props.products[7] //NikonD750
+    let products = props.products
 
 
-    // console.log(props.products)
+    const matchedTarget = products.filter(product => {
+        return product.new === "new"
+    })
+   
+    // console.log(matchedTarget)
 
 
-    // Name can be a linked to product page
     return (
         <Carousel className="featured__carousel" responsive={responsive} infinite>
-            <a className="featured__item" href=''><img className="featured__item--img" src='https://stockx.imgix.net/products/streetwear/Supreme-x-Louis-Vuitton-Box-Logo-Hooded-Sweatshirt-Red.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1553700708&w=1000' alt="featured-item" />
-            </a>
-            <a className="featured__item" href=''><img className="featured__item--img" src='https://stockx.imgix.net/products/streetwear/Supreme-Motion-Logo-Tee-SS20-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1593723864&w=1000' alt="featured-item" />
-            </a>
-            <a className="featured__item" href=''><img className="featured__item--img" src='https://stockx.imgix.net/products/streetwear/Supreme-Comme-Des-Garcons-SHIRT-Box-Logo-Tee-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1538082009&w=1000' alt="featured-item" />
-            </a>
-            <a className="featured__item" href=''><img className="featured__item--img" src='https://stockx.imgix.net/products/streetwear/Supreme-Comme-Des-Garcons-SHIRT-Box-Logo-Tee-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1538082009&w=1000' alt="featured-item" />
-            </a>
-            <a className="featured__item" href=''><img className="featured__item--img" src='https://stockx.imgix.net/products/streetwear/Supreme-Comme-Des-Garcons-SHIRT-Box-Logo-Tee-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1538082009&w=1000' alt="featured-item" />
-            </a>
-            <a className="featured__item" href=''><img className="featured__item--img" src='https://stockx.imgix.net/products/streetwear/Supreme-Box-Logo-Crewneck-FW18-Ash-Grey.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1544119130' alt="featured-item" />
-            </a>
-            <a className="featured__item" href=''><img className="featured__item--img" src='https://stockx.imgix.net/products/streetwear/Supreme-Swarovski-Box-Logo-Hooded-Sweatshirt-Heather-Grey.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1556201863' alt="featured-item" />
-            </a>
-            <a className="featured__item" href=''><img className="featured__item--img" src='https://stockx.imgix.net/products/streetwear/Supreme-Swarovski-Box-Logo-Hooded-Sweatshirt-Heather-Grey.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1556201863' alt="featured-item" />
-            </a>
+            {matchedTarget.map((product, i) => {
+                return (
+                    <div className= 'carousel__list' key={i}>
+                        <Link className='carousel__list-product' to={`/product/${product.id}`}><img className='carousel__item--img' img src={product.imgurl} alt='carousel-img' /></Link>
+                    </div>
+                )
+            })}
         </Carousel >
     );
 }
 
 
-// const mapStateToProps = state => {
-//     return {
-//         // products: state.session.products
-//         products: Object.values(state.products)
-//     }
-// }
+const mapStateToProps = state => {
+    return {
+        products: Object.values(state.products)
+    }
+}
 
 
 export default connect(
-    // mapStateToProps
+    mapStateToProps
 )(
     FeaturedItem
 );

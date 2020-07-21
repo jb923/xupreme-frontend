@@ -1,7 +1,7 @@
 .product__map-container {
     background-color: #ffffff;
     width: 1000px;
-    height: 628px;
+    height: 625px;
     overflow-y: scroll;
     padding: 8px;
     display: flex;
@@ -9,7 +9,8 @@
     flex-wrap: wrap;
     overflow-wrap: normal;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: 35px;
+    margin-top: 20px;
 }
 
 .product__list-product {
