@@ -9,7 +9,7 @@ const NavLower = props => {
             </div>
             <div className='nav-right'>
                 <a className="navlower navlower__viewall" href='/all'>view all</a>
-                <a className="navlower navlower__shop" href='/shop'>sizing</a>
+                <a className="navlower navlower__shop" href=''>sizing</a>
                 <a className="navlower navlower__stores" href=''>terms</a>
                 <a className="navlower navlower__privacy" href=''>privacy</a>
             </div>

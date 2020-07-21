@@ -16,10 +16,10 @@
 
 .navlower {
     font-size: 14px;
-    margin-right: 12px;
+    margin-right: 14px;
     text-decoration: none;
     color: black;
-    /* padding: 1px; */
+    padding: 1px;
 }
 
 .navlower:hover {
@@ -39,6 +39,7 @@
     margin-right: 12px;
     text-decoration: none;
     color: black;
+    padding: 1px;
 }
 
 .navupper:hover {

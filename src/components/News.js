@@ -9,7 +9,7 @@ const News = () => {
         <>
             <Header />
             <div className="news__container">
-                <img src="https://assets.supremenewyork.com/190345/ma/bzgwWYHW_J4.jpg" />
+                <img src={require("../assets/supreme-news.jpg")} />
                 <div className="news__info">
                     <p>07/07/2020</p>
                     <h2>Supreme/Vans</h2>

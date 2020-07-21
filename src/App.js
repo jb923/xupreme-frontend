@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
+
+import { fetchProducts } from "./actions/productActions";
+
 import MainPage from './components/MainPage';
 import Shop from './components/Shop';
 import ViewAll from './components/ViewAll';
@@ -16,6 +19,7 @@ import "./stylesheets/navbars.css";
 import "./stylesheets/session.css";
 import "./stylesheets/news.css";
 import "./stylesheets/stores.css";
+import "./stylesheets/productlist.css"
 
 const App = props => {
   // useEffect(() => {
@@ -26,11 +30,11 @@ const App = props => {
   //     props.loadCart();
   // });
 
-  // useEffect(() => {
-  //     (async () => {
-  //         await props.fetchProducts();
-  //     })();
-  // });
+  useEffect(() => {
+      (async () => {
+          await props.fetchProducts();
+      })();
+  });
 
   // useEffect(() => {
   //     window.scrollTo(0, 0)
@@ -55,17 +59,17 @@ const App = props => {
 
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//       loadToken: () => dispatch(loadToken()),
-//       loadCart: () => dispatch(loadCart()),
-//       fetchProducts: () => dispatch(fetchProducts())
-//   }
-// }
+const mapDispatchToProps = dispatch => {
+  return {
+      // loadToken: () => dispatch(loadToken()),
+      // loadCart: () => dispatch(loadCart()),
+      fetchProducts: () => dispatch(fetchProducts())
+  }
+}
 
 export default connect(
   null,
-  // mapDispatchToProps
+  mapDispatchToProps
 )(
   App
 );

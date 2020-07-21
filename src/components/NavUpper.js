@@ -7,7 +7,7 @@ const NavUpper = props => {
         <div className="navupper__container">
             <a className="navupper navupper__all" href=''>all</a>
             <a className="navupper navupper__jackets" href=''>jackets</a>
-            <a className="navupper navupper__shirts" href='/shop'>shirts</a>
+            <a className="navupper navupper__shirts" href=''>shirts</a>
             <a className="navupper navupper__tops" href=''>tops</a>
             <a className="navupper navupper__sweaters" href=''>sweatshirts</a>
             <a className="navupper navupper__shorts" href=''>shorts</a>
