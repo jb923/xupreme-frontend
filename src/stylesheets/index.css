@@ -6,6 +6,7 @@ body {
     background-image: url("https://d17ol771963kd3.cloudfront.net/assets/bg/1-59b00d663c47e1d9275ef49b685893a4.gif");
     background-size: cover;
     background-repeat: no-repeat;
+    /* filter: brightness(105%) */
 
 }
 

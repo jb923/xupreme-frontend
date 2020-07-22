@@ -7,10 +7,10 @@
 }
 
 .news__container img {
-    width: 210px;
-    height: 280px;
+    width: 240px;
+    height: 310px;
     padding: 16px;
-    margin: 12px 24px;
+    margin: 20px 24px;
 }
 
 .news__info {
@@ -32,7 +32,7 @@
 
 .news__info p {
     color:#ffffff;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
 }
 

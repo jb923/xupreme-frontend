@@ -41,7 +41,7 @@
     text-decoration: none;
     color: #ffffff;
     padding: 1px;
-    margin-top: 8px;
+    margin-top: 16px;
 }
 
 .navupper:hover {
@@ -58,7 +58,7 @@
 .navmain {
     color: #ffffff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     margin-right: 48px;
     padding: 1px;
 }

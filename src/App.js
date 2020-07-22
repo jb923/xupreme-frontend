@@ -12,6 +12,8 @@ import Signup from './components/Signup';
 import News from './components/News';
 import About from './components/About';
 import Stores from './components/Stores';
+import ProductPage from './components/ProductPage';
+import Cart from './components/Cart';
 import "./stylesheets/header.css";
 import "./stylesheets/footer.css";
 import "./stylesheets/featuredItem.css";
@@ -19,7 +21,9 @@ import "./stylesheets/navbars.css";
 import "./stylesheets/session.css";
 import "./stylesheets/news.css";
 import "./stylesheets/stores.css";
-import "./stylesheets/productlist.css"
+import "./stylesheets/productlist.css";
+import "./stylesheets/productpage.css";
+import "./stylesheets/cart.css";
 
 const App = props => {
   // useEffect(() => {
@@ -50,9 +54,9 @@ const App = props => {
           <Route path="/news" component={News} />
           <Route path="/about" component={About} />
           <Route path="/stores" component={Stores} />
-          {/* <Route path="/products/:productId" component={ProductPage} /> */}
-          {/* <Route path="/cart" component={Cart} />
-          <Route path="/category/:categoryId" component={ProductList} />
+          <Route path="/product/:productId" component={ProductPage} />
+          <Route path="/cart" component={Cart} />
+          {/* <Route path="/category/:categoryId" component={ProductList} />
           <Route path="/profile" component={ProfilePage} /> */}
       </BrowserRouter>
   );
