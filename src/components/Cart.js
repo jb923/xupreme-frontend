@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import Header from "./Header";
-
 import NavLower from "./NavLower";
+
+
 import { removeFromCart } from "../actions/cartActions";
 
 
@@ -20,8 +21,13 @@ const Cart = (props) => {
         props.removeFromCart(event.target.id);
     }
 
+    // const handleSubmit = event => {
+        
+    // }
+
     if (props.products.length === 0) return null;
     // console.log(props.product)
+
 
     return (
         <>
@@ -49,13 +55,15 @@ const Cart = (props) => {
                         </div>
                     );
                 })}
-                <div className="cart__subtotal--container">
-                    <div className="cart__subtotal--total">subtotal: ${(total / 100)}</div>
-                </div>
-                <div className="cart__button--container">
-                    <button className="cart__shopping--button" onClick={() => props.openModal("checkout")}>keep shopping</button>  
-                    <button className="cart__checkout--button" onClick={() => props.openModal("checkout")}>checkout now</button>
-                </div>
+            </div>
+            <div className="cart__lower">
+                    <div className="cart__subtotal--container">
+                        <div className="cart__subtotal--total">subtotal: ${(total / 100)}</div>
+                    </div>
+                    <div className="cart__button--container">
+                        <button className="cart__shopping--button" onClick={() => props.openModal("checkout")}>keep shopping</button>  
+                        <button className="cart__checkout--button" >checkout now</button>
+                    </div>
             </div>
             <NavLower />
         </>

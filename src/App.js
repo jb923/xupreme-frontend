@@ -19,6 +19,7 @@ import ProductList from './components/ProductList';
 import Terms from './components/Terms';
 import Privacy from './components/Privacy';
 import Faq from './components/Faq';
+import Checkout from './components/Checkout';
 
 
 const App = props => {
@@ -56,6 +57,7 @@ const App = props => {
           <Route path="/terms" component={Terms} />
           <Route path="/privacy" component={Privacy} />
           <Route path="/faq" component={Faq} />
+          <Route path="/checkout" component={Checkout} />
           {/* // <Route path="/profile" component={ProfilePage} /> */}
       </BrowserRouter>
   );
