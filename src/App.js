@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import { fetchProducts } from "./actions/productActions";
+import { loadCart } from "./actions/cartActions";
 
 import MainPage from './components/MainPage';
 import Shop from './components/Shop';
@@ -14,25 +15,26 @@ import About from './components/About';
 import Stores from './components/Stores';
 import ProductPage from './components/ProductPage';
 import Cart from './components/Cart';
-import "./stylesheets/header.css";
-import "./stylesheets/footer.css";
-import "./stylesheets/featuredItem.css";
-import "./stylesheets/navbars.css";
-import "./stylesheets/session.css";
-import "./stylesheets/news.css";
-import "./stylesheets/stores.css";
-import "./stylesheets/productlist.css";
-import "./stylesheets/productpage.css";
-import "./stylesheets/cart.css";
+import ProductList from './components/ProductList';
+// import "./stylesheets/header.css";
+// import "./stylesheets/footer.css";
+// import "./stylesheets/featuredItem.css";
+// import "./stylesheets/navbars.css";
+// import "./stylesheets/session.css";
+// import "./stylesheets/news.css";
+// import "./stylesheets/stores.css";
+// import "./stylesheets/productlist.css";
+// import "./stylesheets/productpage.css";
+// import "./stylesheets/cart.css";
 
 const App = props => {
   // useEffect(() => {
   //     props.loadToken();
   // });
 
-  // useEffect(() => {
-  //     props.loadCart();
-  // });
+  useEffect(() => {
+      props.loadCart();
+  });
 
   useEffect(() => {
       (async () => {
@@ -56,8 +58,8 @@ const App = props => {
           <Route path="/stores" component={Stores} />
           <Route path="/product/:productId" component={ProductPage} />
           <Route path="/cart" component={Cart} />
-          {/* <Route path="/category/:categoryId" component={ProductList} />
-          <Route path="/profile" component={ProfilePage} /> */}
+          <Route path="/category/:categoryId" component={ProductList} />
+          {/* // <Route path="/profile" component={ProfilePage} /> */}
       </BrowserRouter>
   );
 
@@ -66,7 +68,7 @@ const App = props => {
 const mapDispatchToProps = dispatch => {
   return {
       // loadToken: () => dispatch(loadToken()),
-      // loadCart: () => dispatch(loadCart()),
+      loadCart: () => dispatch(loadCart()),
       fetchProducts: () => dispatch(fetchProducts())
   }
 }
