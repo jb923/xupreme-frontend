@@ -25,6 +25,10 @@ const Cart = (props) => {
         props.history.push('/checkout')
     }
 
+    const handleShopping = () => {
+        props.history.push('/all')
+    }
+
 
     if (props.products.length === 0) return null;
 
@@ -62,7 +66,7 @@ const Cart = (props) => {
                         <div className="cart__subtotal--total">subtotal: ${(total / 100)}</div>
                     </div>
                     <div className="cart__button--container">
-                        <button className="cart__shopping--button" onClick={() => props.openModal("checkout")}>keep shopping</button>  
+                        <button className="cart__shopping--button" onClick={(handleShopping)}>keep shopping</button>  
                         <button className="cart__checkout--button" onClick={(handleCheckout)}>checkout now</button>
                     </div>
             </div>

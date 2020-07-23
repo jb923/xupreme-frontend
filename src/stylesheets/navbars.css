@@ -15,7 +15,7 @@
 }
 
 .navlower {
-    font-size: 14px;
+    font-size: 15px;
     margin-right: 14px;
     text-decoration: none;
     /* color: black; */
@@ -38,6 +38,7 @@
 .navupper {
     font-size: 16px;
     margin-right: 12px;
+    margin-left: 12px;
     text-decoration: none;
     color: #ffffff;
     padding: 1px;

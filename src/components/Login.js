@@ -42,16 +42,16 @@ const Login = props => {
     );
 }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         login: (email, password) => dispatch(login(email, password)),
-//         closeModal: () => dispatch(closeModal())
-//     }
-// }
+const mapDispatchToProps = dispatch => {
+    return {
+        login: (email, password) => dispatch(login(email, password)),
+        // closeModal: () => dispatch(closeModal())
+    }
+}
 
 export default connect(
     null,
-    // mapDispatchToProps
+    mapDispatchToProps
 )(
     Login
 );

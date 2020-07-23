@@ -15,7 +15,7 @@
     text-align: center;
     justify-content: center;
     margin: 0px auto;
-    position: fixed;
+    position: absolute;
     z-index: 1;
 }
 

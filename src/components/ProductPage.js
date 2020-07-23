@@ -31,7 +31,7 @@ const ProductPage = (props) => {
     // {...props} 
     return (
         <>
-            <Header />
+            <Header {...props} />
             <NavUpper />
             <div className="products__main">
                 <div className="products__main-container">

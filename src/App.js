@@ -20,6 +20,7 @@ import Terms from './components/Terms';
 import Privacy from './components/Privacy';
 import Faq from './components/Faq';
 import Checkout from './components/Checkout';
+import Profile from './components/Profile';
 
 
 const App = props => {
@@ -58,7 +59,7 @@ const App = props => {
           <Route path="/privacy" component={Privacy} />
           <Route path="/faq" component={Faq} />
           <Route path="/checkout" component={Checkout} />
-          {/* // <Route path="/profile" component={ProfilePage} /> */}
+          <Route path="/profile" component={Profile} />
       </BrowserRouter>
   );
 

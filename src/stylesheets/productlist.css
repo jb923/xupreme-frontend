@@ -20,12 +20,61 @@
 
 
 .product__list-product-img img {
-    height: 140px;
-    width: 140px;
+    height: 170px;
+    width: 170px;
     padding: 2px;
     margin: 2px 4px;
 }
 
 .product__list-product-img img:hover {
     border: 1px solid #b5b5b5;
+}
+
+.category__map--container {
+    background-color: #ffffff;
+    width: 1000px;
+    height: 625px;
+    overflow-y: scroll;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-wrap: normal;
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+
+.category__list--product{
+    position: relative;
+    padding: 4px;
+}
+
+.category__img {
+    height: 170px;
+    width: 170px;
+    padding: 2px;
+    margin: 2px 4px;
+    text-decoration: none;
+}
+
+.category__img:hover {
+    border: 1px solid #b5b5b5;
+}
+
+.category__product--name {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow-wrap: normal;
+    max-width: 170px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.category__product--color {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow-wrap: normal;
+    max-width: 170px;
+    text-decoration: none;
+    text-align: left;
 }

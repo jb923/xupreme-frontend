@@ -23,7 +23,7 @@ const Signup = props => {
         event.preventDefault();
         if (password === confirmPassword) {
             await props.createUser(firstName, lastName, email, password);
-            props.closeModal();
+            // props.closeModal();
             window.location.reload();
         } else {
             alert("Passwords must match!");
