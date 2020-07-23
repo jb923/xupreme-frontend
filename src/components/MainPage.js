@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+// import Header from './Header';
 import NavBox from './NavBox';
 import Footer from './Footer';
 import Clock from "./Clock"

@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+// import { connect } from "react-redux";
 
 
 const NavBox = props => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import Header from "./Header";
-import NavUpper from "./NavUpper";
+// import NavUpper from "./NavUpper";
 import NavLower from "./NavLower";
 import { removeFromCart } from "../actions/cartActions";
 
@@ -9,7 +9,7 @@ import { removeFromCart } from "../actions/cartActions";
 
 const Cart = (props) => {
     const cartItemsArray = props.cartItemsArray;
-    const [cartArray, setCartArray] = useState(cartItemsArray);
+    // const [cartArray, setCartArray] = useState(cartItemsArray);
     const targetProducts = cartItemsArray.map(item => props.productsObj[item]);
     let total = 0;
 

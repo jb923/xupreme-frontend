@@ -10,9 +10,12 @@ const ProductList = (props) => {
     // if (props.categories.length === 0 ) return null;
     // let category = products.category
     // let category = (props.match.params.categoryId);
-    let category = props.products[5].category
+    // let category = props.products.category
+    // console.log(category)
+    const category = products.map(product => {
+        return product.category
+    })
     console.log(category)
-
     // if (typeof (category) === "string" && category.length > 2) {
     //     const matchedProducts = products.filter(product => {
     //         return product.category
@@ -35,12 +38,12 @@ const ProductList = (props) => {
     //     );
     // }
 
-    const productsArray = ["jackets", "shirts", "tops", "sweatshirts", "shorts", "hats", "bags", "accessories", "shoes", "skate"];
+    const productsArray = ["", "jackets", "shirts", "tops", "sweatshirts", "shorts", "hats", "bags", "accessories", "shoes", "skate"];
     if (typeof (parseInt(category, 10)) === "number") {
         const matchedProducts = products.filter(product => {
             return product.category === (parseInt(category, 10));
         })
-
+        console.log(window.location.href)
         return (
             <>
                 <div className="category__list">
@@ -52,10 +55,6 @@ const ProductList = (props) => {
                         {matchedProducts.map((product, i) => {
                             return (
                                 <div className="category__list-product" key={i}>
-                                    {/* <div className="category__list-nameprice-container">
-                                        <Link className="category__list-product-name" to={`/products/${product.id}`}>{product.name}</Link>
-                                        <div className="category__list-product-price">${(product.price / 100.00).toFixed(2)}</div>
-                                    </div> */}
                                     <Link className="category__list-product-img" to={`/products/${product.id}`}><img className="product__item--img" src={product.imgurl} alt="product-img" /></Link>
                                 </div>
                             );
