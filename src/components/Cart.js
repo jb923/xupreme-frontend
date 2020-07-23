@@ -10,7 +10,7 @@ import { removeFromCart } from "../actions/cartActions";
 
 
 const Cart = (props) => {
-    
+    const userId = props.sessionId;
     const cartItemsArray = props.cartItemsArray;
     const [cartArray, setCartArray] = useState(cartItemsArray);
     const targetProducts = cartItemsArray.map(item => props.productsObj[item]);
@@ -21,12 +21,13 @@ const Cart = (props) => {
         props.removeFromCart(event.target.id);
     }
 
-    // const handleSubmit = event => {
-        
-    // }
+    const handleCheckout = ()=>{
+        props.history.push('/checkout')
+    }
+
 
     if (props.products.length === 0) return null;
-    // console.log(props.product)
+
 
 
     return (
@@ -62,7 +63,7 @@ const Cart = (props) => {
                     </div>
                     <div className="cart__button--container">
                         <button className="cart__shopping--button" onClick={() => props.openModal("checkout")}>keep shopping</button>  
-                        <button className="cart__checkout--button" >checkout now</button>
+                        <button className="cart__checkout--button" onClick={(handleCheckout)}>checkout now</button>
                     </div>
             </div>
             <NavLower />

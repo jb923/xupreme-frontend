@@ -16,9 +16,6 @@ const Checkout = (props) => {
 
     const [cartArray, setCartArray] = useState(cartItems);
 
-    // const handleBackgroundClick = event => {
-    //     props.closeModal();
-    // }
 
     const handleClick = event => {
         props.createTransaction(userId, cartItems, total);
@@ -27,6 +24,7 @@ const Checkout = (props) => {
         props.history.push('/profile');
     }
     // if (props.products.length === 0) return null;
+    console.log(props)
 
     return (
         <>
@@ -68,7 +66,7 @@ const Checkout = (props) => {
                     </form>
                 </div>
                 <div className="checkout__button-container">
-                    <button className="checkout__button-cancel" onClick={handleClick}>cancel</button>
+                    {/* <button className="checkout__button-cancel" onClick={handleClick}>cancel</button> */}
                     <button className="checkout__button-process" onClick={handleClick}>process payment</button>
                 </div>
             </div>

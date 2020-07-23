@@ -11,19 +11,19 @@ const FeaturedItem = (props) => {
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
-            items: 8
+            items: 4
         },
         largerDesktop: {
             breakpoint: { max: 3000, min: 2500 },
-            items: 7
+            items: 4
         },
         largeDesktop: {
             breakpoint: { max: 2500, min: 2000 },
-            items: 6
+            items: 4
         },
         desktop: {
             breakpoint: { max: 2000, min: 1024 },
-            items: 5
+            items: 4
         },
         smallerDesktop: {
             breakpoint: { max: 1024, min: 750 },
