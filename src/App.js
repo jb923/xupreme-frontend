@@ -19,16 +19,7 @@ import ProductList from './components/ProductList';
 import Terms from './components/Terms';
 import Privacy from './components/Privacy';
 import Faq from './components/Faq';
-// import "./stylesheets/header.css";
-// import "./stylesheets/footer.css";
-// import "./stylesheets/featuredItem.css";
-// import "./stylesheets/navbars.css";
-// import "./stylesheets/session.css";
-// import "./stylesheets/news.css";
-// import "./stylesheets/stores.css";
-// import "./stylesheets/productlist.css";
-// import "./stylesheets/productpage.css";
-// import "./stylesheets/cart.css";
+
 
 const App = props => {
   // useEffect(() => {

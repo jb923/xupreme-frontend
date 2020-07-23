@@ -10,7 +10,7 @@ import { addToCart } from "../actions/cartActions";
 
 const ProductPage = (props) => {
     let id = Number(props.match.params.productId);
-    
+
     useEffect(() => {
         (async () => {
             await props.fetchReviews(id);
@@ -31,7 +31,7 @@ const ProductPage = (props) => {
     // {...props} 
     return (
         <>
-            <Header {...props}/>
+            <Header />
             <NavUpper />
             <div className="products__main">
                 <div className="products__main-container">
