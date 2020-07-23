@@ -1,0 +1,59 @@
+.terms__main {
+    height: 600px;
+    width: 850px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    margin: 48px auto;
+}
+
+.terms__main-container {
+    text-align: left;
+    font-family: 'Courier New', Courier, Monaco;
+    margin: 0px 0px 11px;
+    font-size: 13px;
+    padding: 8px;
+}
+
+.terms__heading {
+    font-weight: bold;
+}
+
+.privacy__main {
+    height: 600px;
+    width: 850px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    margin: 48px auto;
+}
+
+.privacy__main-container {
+    text-align: left;
+    font-family: 'Courier New', Courier, Monaco;
+    margin: 0px 0px 11px;
+    font-size: 13px;
+    padding: 8px;
+}
+
+.privacy__heading {
+    font-weight: bold;
+}
+
+.faq__main {
+    height: 600px;
+    width: 850px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    margin: 48px auto;
+}
+
+.faq__main-container {
+    text-align: left;
+    font-family: 'Courier New', Courier, Monaco;
+    margin: 0px 0px 11px;
+    font-size: 13px;
+    padding: 8px;
+}
+
+.faq__heading {
+    font-weight: bold;
+}

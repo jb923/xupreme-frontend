@@ -3,7 +3,9 @@
     flex-direction: row;
     background-color: white;
     height: 500px;
-    width: 850px;
+    width: 900px;
+    /* width: 1000px;
+    height: 625px; */
     padding: 12px;
 }
 

@@ -16,6 +16,9 @@ import Stores from './components/Stores';
 import ProductPage from './components/ProductPage';
 import Cart from './components/Cart';
 import ProductList from './components/ProductList';
+import Terms from './components/Terms';
+import Privacy from './components/Privacy';
+import Faq from './components/Faq';
 // import "./stylesheets/header.css";
 // import "./stylesheets/footer.css";
 // import "./stylesheets/featuredItem.css";
@@ -59,6 +62,9 @@ const App = props => {
           <Route path="/product/:productId" component={ProductPage} />
           <Route path="/cart" component={Cart} />
           <Route path="/category/:categoryId" component={ProductList} />
+          <Route path="/terms" component={Terms} />
+          <Route path="/privacy" component={Privacy} />
+          <Route path="/faq" component={Faq} />
           {/* // <Route path="/profile" component={ProfilePage} /> */}
       </BrowserRouter>
   );

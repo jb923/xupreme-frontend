@@ -13,6 +13,7 @@ import "./stylesheets/stores.css";
 import "./stylesheets/productlist.css";
 import "./stylesheets/productpage.css";
 import "./stylesheets/cart.css";
+import "./stylesheets/terms.css";
 
 import App from './App';
 
