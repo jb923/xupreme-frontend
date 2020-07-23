@@ -122,10 +122,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background-color: aquamarine;
 }
 
 .cart__subtotal--total {
-    position: absolute;
+    position: relative;
     border-left: 1px dotted #636363;
     border-bottom: 1px dotted #636363;
     padding: 6px;
@@ -141,7 +142,6 @@
     justify-content: flex-end;
     align-items: center;
     border: 1px solid #636363;
-    /* margin-bottom: 4px; */
 }
 
 .cart__shopping--button {
