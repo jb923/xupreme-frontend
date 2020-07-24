@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import Header from "./Header";
@@ -6,16 +6,23 @@ import NavLower from "./NavLower";
 
 
 import { removeFromCart } from "../actions/cartActions";
+// import { fetchProducts } from "../actions/productActions"
 
 
 
 const Cart = (props) => {
+
     const userId = props.sessionId;
     const cartItemsArray = props.cartItemsArray;
-    const [cartArray, setCartArray] = useState(cartItemsArray);
-    const targetProducts = cartItemsArray.map(item => props.productsObj[item]);
+    const [cartArray, setCartArray] = useState(cartItemsArray); 
+    if (props.products.length === 0) return null;
+    const targetProducts = cartItemsArray.map(item => {
+        let selectedProduct = props.productsObj[item.product]
+        selectedProduct.size = item.size
+        return selectedProduct 
+    });
     let total = 0;
-
+    
 
     const handleRemove = event => {
         props.removeFromCart(event.target.id);
@@ -30,9 +37,11 @@ const Cart = (props) => {
     }
 
 
-    if (props.products.length === 0) return null;
-
-
+    // let selectSize;
+    // if (targetProducts.size) {
+    //     selectSize = (
+    //         <div className="cart__item--size">Size: {product.size} </div>
+    //     )} 
 
     return (
         <>
@@ -52,7 +61,7 @@ const Cart = (props) => {
                             <div className="cart__item--description">
                                 <div className="cart__item--name">{product.name}
                                     <div className="cart__item--color">Style: {product.color}</div>
-                                    <div className="cart__item--size">Size: </div>
+                                    <div className="cart__item--size">Size: {product.size} </div>
                                 </div>
                             </div>
                             <button onClick={handleRemove} id={product.id} className="cart__item--remove">Remove</button>
@@ -80,6 +89,7 @@ const mapStateToProps = (state) => {
         cartItemsArray: state.cart,
         productsObj: state.products,
         products: Object.values(state.products),
+        // fetchProducts: () => dispatch(fetchProducts()),
     };
 };
 
@@ -87,6 +97,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         // openModal: (modal) => dispatch(openModal(modal)),
         removeFromCart: (id) => dispatch(removeFromCart(id)),
+        // fetchProducts: () => dispatch(fetchProducts()),
     };
 };
 

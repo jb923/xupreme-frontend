@@ -6,10 +6,12 @@ import NavUpper from "./NavUpper";
 import NavLower from "./NavLower";
 import { fetchReviews } from "../actions/reviewActions";
 import { addToCart } from "../actions/cartActions";
+// import { removeFromCart } from "../actions/cartActions";
 
 
 const ProductPage = (props) => {
     let id = Number(props.match.params.productId);
+    const [selectedSize, setSelectedSize] = useState()    
 
     useEffect(() => {
         (async () => {
@@ -19,19 +21,41 @@ const ProductPage = (props) => {
 
     let product = props.products[id];
 
-    if (!product) return null;
-
     let { description, imgurl, name, price, color } = props.products[id];
+
+    let sizes = props.sizes
+    console.log(sizes)
+
+    if (!product) return null;
+    if (!sizes) return null;
 
     const handleSubmit = event => {
         event.preventDefault();
-        props.addToCart(id);
+        props.addToCart({product: product.id, size: selectedSize});
     }
 
-    // {...props} 
+    const handleChange = (event) => {
+        event.preventDefault();
+        setSelectedSize(event.target.value)
+    }
+
+    let selectField;
+    if (sizes[id]) {
+        selectField = (
+            <label className="products__label">size: 
+                <select className="products__size" placeholder="size"  onChange={handleChange}> 
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                    <option value="xlarge">xlarge</option>
+                </select>
+            </label>
+        )} 
+    
+    
     return (
         <>
-            <Header {...props} />
+            <Header />
             <NavUpper />
             <div className="products__main">
                 <div className="products__main-container">
@@ -45,7 +69,7 @@ const ProductPage = (props) => {
                         <div className="products__price">${(price / 100)}</div>
 
                         <form className="products__cart-container" onSubmit={handleSubmit}>
-                            <label className="products__label">Size: <input className="products__quantity" type="number" placeholder="Small" /></label>
+                            {selectField}
                             <button className="products__cart">add to cart</button>
                             <button className="products__shopping">keep shopping</button>
                         </form>
@@ -64,13 +88,15 @@ const mapStateToProps = (state) => {
     return {
         products: state.products,
         reviews: state.reviews,
+        sizes: state.sizes,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchReviews: (id) => dispatch(fetchReviews(id)),
-        addToCart: (productId) => dispatch(addToCart(productId))
+        addToCart: (productId) => dispatch(addToCart(productId)),
+        // removeFromCart: (id) => dispatch(removeFromCart(id)),
     };
 };
 

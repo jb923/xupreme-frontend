@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import { fetchProducts } from "./actions/productActions";
+import { fetchSizes } from "./actions/sizeActions";
 import { loadCart } from "./actions/cartActions";
 
 import MainPage from './components/MainPage';
@@ -38,6 +39,12 @@ const App = props => {
       })();
   });
 
+  useEffect(() => {
+    (async () => {
+        await props.fetchSizes();
+    })();
+  });
+
   // useEffect(() => {
   //     window.scrollTo(0, 0)
   // }, [])
@@ -69,7 +76,8 @@ const mapDispatchToProps = dispatch => {
   return {
       // loadToken: () => dispatch(loadToken()),
       loadCart: () => dispatch(loadCart()),
-      fetchProducts: () => dispatch(fetchProducts())
+      fetchProducts: () => dispatch(fetchProducts()),
+      fetchSizes: () => dispatch(fetchSizes())
   }
 }
 

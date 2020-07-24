@@ -12,6 +12,7 @@ import NavLower from "./NavLower";
 const Checkout = (props) => {
     const userId = props.sessionId;
     const cartItems = props.cartItems;
+    
 
     const [cartArray, setCartArray] = useState(cartItems);
 
@@ -19,7 +20,7 @@ const Checkout = (props) => {
     const handleClick = event => {
         props.createTransaction(userId, cartItems, total);
         window.localStorage.removeItem("supreme/cart");
-        props.setCartArray("");
+        // props.setCartArray("");
         props.history.push('/profile');
     }
 
@@ -29,11 +30,8 @@ const Checkout = (props) => {
 
     if (props.products.length === 0) return null;
     let total = 0;
-    const targetProducts = cartItems.map(item => props.productsObj[item]);
-    console.log(props.productsObj)
-    targetProducts.forEach(product => {total += product.price} 
-        
-    );
+    const targetProducts = cartItems.map(item => props.productsObj[item.product]);
+    targetProducts.forEach(product => {total += product.price});
 
  
 

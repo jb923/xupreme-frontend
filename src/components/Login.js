@@ -36,7 +36,7 @@ const Login = props => {
                 <input type="password" onChange={updatePassword} className="form__input" value={Loginpassword} placeholder="Password" />
                 <button className="form__button" onClick={handleSubmit}>Log In</button>
                 <button className="demo__button" onClick={handleDemoUser}>Demo User</button>
-                <Link to="/Signup" className="signup__link">sign up</Link>
+                <Link to="/signup" className="signup__link">sign up</Link>
             </form>
         </>
     );
