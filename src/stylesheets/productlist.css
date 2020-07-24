@@ -52,13 +52,22 @@
 .category__img {
     height: 170px;
     width: 170px;
-    padding: 2px;
+    padding: 5px;
     margin: 2px 4px;
-    text-decoration: none;
+
 }
 
 .category__img:hover {
     border: 1px solid #b5b5b5;
+}
+
+.category__list--img {
+    text-decoration: none;
+    color: #000000;
+}
+
+.category__list--img:hover {
+    font-weight: bold;
 }
 
 .category__product--name {
@@ -66,7 +75,6 @@
     font-size: 14px;
     overflow-wrap: normal;
     max-width: 170px;
-    text-decoration: none;
     text-align: left;
 }
 
@@ -75,6 +83,7 @@
     font-size: 14px;
     overflow-wrap: normal;
     max-width: 170px;
-    text-decoration: none;
     text-align: left;
 }
+
+

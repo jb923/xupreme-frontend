@@ -92,4 +92,3 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
 
-{/* <Modal total={total} setCartArray={setCartArray} {...props} /> */}

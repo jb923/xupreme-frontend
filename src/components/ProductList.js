@@ -25,7 +25,8 @@ const ProductList = (props) => {
                         {matchedProducts.map((product, i) => {
                             return (
                                 <div className="category__list--product" key={i}>
-                                    <NavLink className="category__list--img" to={`/product/${product.id}`}><img className="category__img" src={product.imgurl} alt="product-img" />
+                                    <NavLink className="category__list--img" to={`/product/${product.id}`}>
+                                        <img className="category__img" src={product.imgurl} alt="product-img" />
                                         <div className="category__product--name">{product.name}</div>
                                         <div className="category__product--color">{product.color}</div>
                                     </NavLink>

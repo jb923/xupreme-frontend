@@ -1,10 +1,8 @@
 import React from 'react';
-// import Header from './Header';
 import NavBox from './NavBox';
 import Footer from './Footer';
 import Clock from "./Clock"
-// import "../stylesheets/header.css";
-// import "../stylesheets/footer.css";
+
 
 
 const MainPage = props => {

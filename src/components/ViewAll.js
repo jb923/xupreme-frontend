@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Header from './Header';
 import NavLower from './NavLower'
 import NavUpper from './NavUpper'
-import ProductList from './ProductList';
+
 
 
 const ViewAll = props => {

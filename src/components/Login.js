@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import Header from "./Header";
 import { login } from "../actions/sessionActions";
-// import { closeModal } from "../actions/modalActions";
+
 
 const Login = props => {
     const [Loginemail, setLoginEmail] = useState("");
@@ -16,14 +16,14 @@ const Login = props => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         await props.login(Loginemail, Loginpassword);
-        props.closeModal();
+        // props.closeModal();
         // window.location.reload();
     };
 
     const handleDemoUser = async (event) => {
         event.preventDefault();
         await props.login("demouser@demouser.com", "demouser");
-        props.closeModal();
+        // props.closeModal();
         // window.location.reload();
     }
 
@@ -45,7 +45,7 @@ const Login = props => {
 const mapDispatchToProps = dispatch => {
     return {
         login: (email, password) => dispatch(login(email, password)),
-        // closeModal: () => dispatch(closeModal())
+
     }
 }
 
