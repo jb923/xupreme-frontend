@@ -1,0 +1,117 @@
+.profile__userinfo {
+    /* background-color: cadetblue; */
+}
+
+.profile__user--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 6px;
+
+}
+
+.profile__pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.profile__username {
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.profile__logout {
+    width: 45px;
+    height: 45px;
+}
+
+.profile__order-container {
+    width: 850px;
+    height: 600px;
+    background-color: #ffffff;
+    margin: 0px auto;
+    overflow-y: scroll;
+    border: 1px dotted #636363;
+}
+
+
+.profile__orders {
+    width: 842px;
+    height: 25px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    text-align: left;
+    background-color: #CCCCCC;
+    position: absolute;
+    z-index: 1;
+}
+
+.profile__transaction {
+    display: flex;
+    flex-direction: column;
+    /* background-color: cornflowerblue; */
+    justify-content: center;
+}
+
+.profile__item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #636363;
+    margin-top: 30px;
+}
+
+.profile__item--img {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-self: center;
+    height: 100px;
+    width: 100px;
+    padding: 5px 10px;
+    border-right: 1px dotted #636363;
+}
+
+.profile__item--img img {
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    padding: 4px;
+}
+
+.profile__item--description {
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: normal;
+    font-size: 14px;
+    padding: 5px 10px;
+    width: 400px;
+    background-color: aquamarine;
+}
+
+.profile__item--name {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-self: center;
+}
+
+.profile__item--price {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    align-self: center;
+    margin: auto 24px;
+    width: 178px;
+}

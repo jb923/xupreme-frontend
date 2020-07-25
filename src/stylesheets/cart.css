@@ -14,7 +14,7 @@
     flex-direction: row;
     text-align: center;
     justify-content: center;
-    margin: 0px auto;
+    /* margin-bottom: 40px; */
     position: absolute;
     z-index: 1;
 }
@@ -43,6 +43,8 @@
     font-size: .6875em;
     font-weight: bold;
 }
+
+
 
 .cart__item--container {
     display: flex;

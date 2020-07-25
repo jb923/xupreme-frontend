@@ -20,7 +20,7 @@ const Checkout = (props) => {
     const handleClick = event => {
         props.createTransaction(userId, cartItems, total);
         window.localStorage.removeItem("supreme/cart");
-        // props.setCartArray("");
+        props.setCartArray("");
         props.history.push('/profile');
     }
 
@@ -87,8 +87,8 @@ const Checkout = (props) => {
 const mapStateToProps = state => {
     return {
         reviews: state.reviews,
-        // sessionId: state.session.id,
-        // firstName: state.session.firstName,
+        sessionId: state.session.id,
+        firstName: state.session.firstName,
         cartItems: state.cart,
         productsObj: state.products,
         products: Object.values(state.products),

@@ -16,15 +16,13 @@ const Login = props => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         await props.login(Loginemail, Loginpassword);
-        // props.closeModal();
-        // window.location.reload();
+        props.history.push("/profile")
     };
 
     const handleDemoUser = async (event) => {
         event.preventDefault();
         await props.login("demouser@demouser.com", "demouser");
-        // props.closeModal();
-        // window.location.reload();
+        props.history.push("/profile")
     }
 
     return (
@@ -45,7 +43,6 @@ const Login = props => {
 const mapDispatchToProps = dispatch => {
     return {
         login: (email, password) => dispatch(login(email, password)),
-
     }
 }
 

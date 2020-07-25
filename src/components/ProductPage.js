@@ -6,7 +6,6 @@ import NavUpper from "./NavUpper";
 import NavLower from "./NavLower";
 import { fetchReviews } from "../actions/reviewActions";
 import { addToCart } from "../actions/cartActions";
-// import { removeFromCart } from "../actions/cartActions";
 
 
 const ProductPage = (props) => {
@@ -19,15 +18,14 @@ const ProductPage = (props) => {
         })();
     }, [id]);
 
-    let product = props.products[id];
-
-    let { description, imgurl, name, price, color } = props.products[id];
 
     let sizes = props.sizes
-    console.log(sizes)
+    let product = props.products[id];
 
     if (!product) return null;
     if (!sizes) return null;
+
+    let { description, imgurl, name, price, color } = props.products[id];
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -44,6 +42,7 @@ const ProductPage = (props) => {
         selectField = (
             <label className="products__label">size: 
                 <select className="products__size" placeholder="size"  onChange={handleChange}> 
+                    <option value="">select size</option>
                     <option value="small">small</option>
                     <option value="medium">medium</option>
                     <option value="large">large</option>

@@ -37,12 +37,6 @@ const Cart = (props) => {
     }
 
 
-    // let selectSize;
-    // if (targetProducts.size) {
-    //     selectSize = (
-    //         <div className="cart__item--size">Size: {product.size} </div>
-    //     )} 
-
     return (
         <>
             <Header />
@@ -89,7 +83,6 @@ const mapStateToProps = (state) => {
         cartItemsArray: state.cart,
         productsObj: state.products,
         products: Object.values(state.products),
-        // fetchProducts: () => dispatch(fetchProducts()),
     };
 };
 
@@ -97,7 +90,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         // openModal: (modal) => dispatch(openModal(modal)),
         removeFromCart: (id) => dispatch(removeFromCart(id)),
-        // fetchProducts: () => dispatch(fetchProducts()),
+ 
     };
 };
 

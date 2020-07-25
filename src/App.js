@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
 
+import { PrivateRoute, AuthRoute } from './utils/routeUtils';
+import { loadToken } from "./actions/sessionActions";
 import { fetchProducts } from "./actions/productActions";
 import { fetchSizes } from "./actions/sizeActions";
 import { loadCart } from "./actions/cartActions";
@@ -25,9 +27,9 @@ import Profile from './components/Profile';
 
 
 const App = props => {
-  // useEffect(() => {
-  //     props.loadToken();
-  // });
+  useEffect(() => {
+      props.loadToken();
+  });
 
   useEffect(() => {
       props.loadCart();
@@ -66,7 +68,7 @@ const App = props => {
           <Route path="/privacy" component={Privacy} />
           <Route path="/faq" component={Faq} />
           <Route path="/checkout" component={Checkout} />
-          <Route path="/profile" component={Profile} />
+          <PrivateRoute path="/profile" component={Profile} />
       </BrowserRouter>
   );
 
@@ -74,7 +76,7 @@ const App = props => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      // loadToken: () => dispatch(loadToken()),
+      loadToken: () => dispatch(loadToken()),
       loadCart: () => dispatch(loadCart()),
       fetchProducts: () => dispatch(fetchProducts()),
       fetchSizes: () => dispatch(fetchSizes())

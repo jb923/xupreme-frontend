@@ -29,3 +29,5 @@ const cartReducer = (state = [], action) => {
 
 
 export default cartReducer 
+
+// nextState = state.filter(item =>item.product !== action.id)

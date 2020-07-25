@@ -49,7 +49,6 @@ const Signup = props => {
 const mapDispatchToProps = dispatch => {
     return {
         createUser: (firstName, lastName, email, password) => dispatch(createUser(firstName, lastName, email, password)),
-        // closeModal: () => dispatch(closeModal())
     }
 }
 
