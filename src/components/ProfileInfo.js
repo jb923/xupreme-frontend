@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
 
@@ -9,10 +9,7 @@ const ProfileInfo = props => {
 
     const transactionArray = [];
     transactions.forEach(transaction => transactionArray.push(transaction.products))
-
     const products = props.products;
-
-    const displayName = props.firstName === "demo" ? "Guest" : props.firstName === "null" ? "" : `${props.firstName} ${props.lastName}.`;
 
 
 
@@ -59,15 +56,11 @@ const mapStateToProps = state => {
     };
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        // logout: () => dispatch(logout()),
-    }
-}
+
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps,
+    // mapDispatchToProps
 )(
     ProfileInfo
 );

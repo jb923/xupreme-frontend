@@ -17,7 +17,7 @@ const Checkout = (props) => {
 
 
     const handleClick = event => {
-        props.createTransaction(userId, cartItems, total);
+        props.createTransaction(userId, transactionItems, total);
         window.localStorage.removeItem("supreme/cart");
         // props.setCartArray("");
         props.history.push('/profile');
@@ -31,7 +31,8 @@ const Checkout = (props) => {
     let total = 0;
     const targetProducts = cartItems.map(item => props.productsObj[item.product]);
     targetProducts.forEach(product => {total += product.price});
-    // console.log(targetProducts)
+
+    const transactionItems = cartItems.map(item => props.productsObj[item.product].id)
 
 
     return (
@@ -97,7 +98,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        createTransaction: (userId, cartItems, total) => dispatch(createTransaction(userId, cartItems, total)),
+        createTransaction: (userId, transactionItems, total) => dispatch(createTransaction(userId, transactionItems, total)),
     };
 };
 

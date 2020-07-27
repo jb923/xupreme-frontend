@@ -26,7 +26,7 @@ export const removeFromCart = (id) => dispatch => {
     window.localStorage.removeItem("supreme/cart");
     products.splice(products.indexOf(id), 1);
     const newArray = cartItemsArray.filter(item => {
-        return parseInt(item, 10) !== parseInt(id, 10);
+        return parseInt(item.product, 10) !== parseInt(id, 10);
     })
     window.localStorage.setItem("supreme/cart", JSON.stringify(newArray));
     dispatch(removeItem(id));

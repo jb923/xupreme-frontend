@@ -78,6 +78,16 @@
     font-size: 12px;
 }
 
+.products__cart:hover {
+    background-color: #000000;
+    
+}
+
+.products__cart:active {
+    background-color: #FF0000;
+
+}
+
 .products__shopping {
     height: 24px;
     width: 100px;
@@ -92,6 +102,10 @@
     padding: .27273em 0;
     font-size: 12px;
     margin-right: 12px;
+}
+
+.products__shopping:hover {
+    background-color: #000000;
 }
 
 

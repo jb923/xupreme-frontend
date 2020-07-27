@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { ProtectedRoute, AuthRoute } from './utils/routeUtils';
+import { ProtectedRoute} from './utils/routeUtils';
 import { loadToken } from "./actions/sessionActions";
 import { fetchProducts } from "./actions/productActions";
 import { fetchSizes } from "./actions/sizeActions";

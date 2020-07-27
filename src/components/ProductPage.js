@@ -6,17 +6,18 @@ import NavUpper from "./NavUpper";
 import NavLower from "./NavLower";
 import { fetchReviews } from "../actions/reviewActions";
 import { addToCart } from "../actions/cartActions";
+import { fetchTransaction } from "../actions/transactionActions";
 
 
 const ProductPage = (props) => {
     let id = Number(props.match.params.productId);
     const [selectedSize, setSelectedSize] = useState()    
 
-    useEffect(() => {
-        (async () => {
-            await props.fetchReviews(id);
-        })();
-    }, [id]);
+    // useEffect(() => {
+    //     (async () => {
+    //         await props.fetchReviews(id);
+    //     })();
+    // }, [id]);
 
 
     let sizes = props.sizes
