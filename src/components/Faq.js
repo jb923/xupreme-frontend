@@ -28,11 +28,11 @@ const Faq = (props) => {
                     <p className="faq__heading">When will my order arrive?</p>
                     <p>Please allow 3-5 business days for order processing and verification, and an additional 7-10 business days for delivery.</p>
                     <p className="faq__heading">I changed my mind. Can I get a refund or make an exchange?</p>
-                    <p>Supreme will gladly exchange an item for online store credit only. Before sending the item back, 
+                    <p>Xupreme will gladly exchange an item for online store credit only. Before sending the item back, 
                         please fill out the return form found in your order shipment confirmation within 2 days of 
                         receipt of your shipment. Packages sent without first contacting us will not be accepted. Items 
                         to be exchanged must be returned in perfect, new condition with all original tags attached. 
-                        Supreme must receive the returned item within 7 days of return authorization. Please note TShirts, Hats, Skateboards, Bags, Accessories, Shoes or Sale Items cannot be returned or exchanged.</p>
+                        Xupreme must receive the returned item within 7 days of return authorization. Please note TShirts, Hats, Skateboards, Bags, Accessories, Shoes or Sale Items cannot be returned or exchanged.</p>
                     <p className="faq__heading">Can you send me a sticker?</p>
                     <p>Nah Bruv.</p>
                 </div>

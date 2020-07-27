@@ -32,14 +32,14 @@ const Signup = props => {
     return (
         <>
             <Header />
-            <div className="signup__header">Join the Supreme Team</div>
+            <div className="signup__header">Join the Xupreme Team</div>
             <form className="form__container" onSubmit={handleSubmit}>
                 <input type="text" onChange={updateFirstName} value={firstName} className="form__input-signup form__input--firstname" placeholder="First name" />
                 <input type="text" onChange={updateLastName} value={lastName} className="form__input-signup form__input--lastname" placeholder="Last name" />
                 <input type="email" onChange={updateEmail} value={email} className="form__input-signup" placeholder="Email address" />
                 <input type="password" onChange={updatePassword} value={password} className="form__input-signup" placeholder="Create a password" />
                 <input type="password" onChange={updateConfirmPassword} value={confirmPassword} className="form__input-signup" placeholder="Confirm password" />
-                <button className="signupform__button">Join Supreme</button>
+                <button className="signupform__button">Join Xupreme</button>
                 <Link to="/login" className="login__link">already a member?</Link>
             </form>
         </>

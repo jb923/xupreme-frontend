@@ -26,7 +26,7 @@ const Profile = (props) => {
         <div className="profile__userinfo">
             <div className="profile__user--container">
                 <img className="profile__pic" src={require("../assets/supremexlv.jpg")} alt="profile-logo" />
-                <div className="profile__username">Supreme Team Member: {displayName}</div>
+                <div className="profile__username">Xupreme Team Member: {displayName}</div>
                 <GrLogout className="profile__logout" onClick={props.logout}/>
             </div>
         </div>

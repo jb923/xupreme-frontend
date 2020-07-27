@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <>
-        <Link to="/" className="header__logo"><img className="img__logo" src={require("../assets/supreme_logo-01.png")} alt="brand__logo" /> </Link>
+        <Link to="/" className="header__logo"><img className="img__logo" src={require("../assets/Xupreme-logo.png")} alt="brand__logo" /> </Link>
         <Clock />
         </>
     )

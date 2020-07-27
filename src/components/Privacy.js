@@ -11,18 +11,18 @@ const Privacy = (props) => {
             <div className="privacy__main">
                 <div className="privacy__main-container">
                     <p className="privacy__heading">Privacy Policy</p>
-                    <p>Welcome To Supreme.</p>
+                    <p>Welcome To Xupreme.</p>
                     <p className="privacy__heading">Who We Are</p>
-                    <p>"We" are Supreme, a company founded in New York City in 1994. We offer Supreme products online 
-                        and through retail stores around the world. Supreme is the sole owner of this website, 
-                        www.Supremenewyork.com (the "Site"), the Supreme mobile app, ("the App")and the services 
-                        available through them (collectively, the Site, the App, and the services available through them are the "Services").</p>
+                    <p>"We" are Xupreme, a company founded in Long Beach in 2020. We offer Xupreme products online 
+                        around the world. Xupreme is the sole owner of this website, 
+                        www.Xupremenewyork.com (the "Site"), the services 
+                        available through them (collectively, the Site, and the services available through them are the "Services").</p>
                     <p className="privacy__heading">What This Policy Covers</p>
                     <p>Our Site and App;</p>
-                    <p>Supreme has an active and vibrant community who buy and discuss our products and our drops. As 
-                        part of this community, you should be aware that Supreme sells authorized Supreme products only 
+                    <p>Xupreme has an active and vibrant community who buy and discuss our products and our drops. As 
+                        part of this community, you should be aware that Xupreme sells authorized Xupreme products only 
                         through its official Site, App and retail stores. Other venues, online or offline, that 
-                        reference Supreme products are not affiliated with or controlled by Supreme and we do not control their activities.</p>
+                        reference Xupreme products are not affiliated with or controlled by Xupreme and we do not control their activities.</p>
                     <p className="privacy__heading">Changes to This Privacy Policy</p>
                     <p>We reserve the right to update the practices described in this Privacy Policy at any time. 
                         Please check here periodically. If we make any material changes, we will notify you as required by law.</p>

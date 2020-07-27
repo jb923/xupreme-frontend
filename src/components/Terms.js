@@ -12,8 +12,8 @@ const Terms = (props) => {
                 <div className="terms__main-container">
                     <p className="terms__heading">Terms</p>
                     <p>Effective February 17, 2019</p>
-                    <p className="terms__heading">Thank you for visiting the Supreme website, www.supremenewyork.com (“Site”) owned and operated 
-                    by Chapter 4 Corp. (d/b/a Supreme) (“Supreme”, “us” or “we”). You should not access this Site or 
+                    <p className="terms__heading">Thank you for visiting the Xupreme website, www.xupremenewyork.com (“Site”) owned and operated 
+                    by Chapter 4 Corp. (d/b/a Xupreme) (“Xupreme”, “us” or “we”). You should not access this Site or 
                     use our services until you have carefully read and agreed to these terms and conditions of use 
                     (the “Terms”) which govern your access to and use of this Site. These Terms apply to all Site 
                     visitors’ access to and use of the Site.</p>
@@ -48,12 +48,12 @@ const Terms = (props) => {
                     <p>We will gladly exchange an item for online store credit only. Before sending the item back, 
                         please fill out the return form found in your order shipment confirmation within 2 days of 
                         receipt of your shipment. Packages sent without first contacting us will not be accepted. Items 
-                        to be exchanged must be returned in perfect, new condition with all original tags attached. Supreme must receive the returned item within 7 days of return authorization.</p>
+                        to be exchanged must be returned in perfect, new condition with all original tags attached. Xupreme must receive the returned item within 7 days of return authorization.</p>
                     <p>For any returned items, you will not be refunded the original cost of shipping, and you are 
                         responsible for the cost of the return shipping. Items may not be returned or exchanged in 
-                        person at any Supreme store location. T-Shirts, Hats, Skateboards, Bags, Accessories, Shoes or 
+                        person at any Xupreme store location. T-Shirts, Hats, Skateboards, Bags, Accessories, Shoes or 
                         Sale Items cannot be returned or exchanged. We do not assume responsibility for reimbursement or
-                        compensation of returned packages lost in transit without proof of delivery to Supreme.</p>
+                        compensation of returned packages lost in transit without proof of delivery to Xupreme.</p>
                     <p className="terms__heading">Shipping</p>
                     <p>At this time, we are only accepting orders from residents that live in the U.S.A., Canada and 
                         Mexico. All orders are shipped via UPS Ground. The shipping rate to the contiguous 48 U.S. 
