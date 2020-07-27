@@ -54,18 +54,20 @@
 
 }
 
+.profile__container--outer {
+    margin-top: 30px;
+}
+
 .profile__transaction {
     display: flex;
     flex-direction: column;
-    /* background-color: cornflowerblue; */
     justify-content: center;
+    padding: 4px;
 }
 
 .profile__item--container{
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
-
 }
 
 .profile__item {
@@ -83,7 +85,7 @@
     height: 120px;
     width: 120px;
     padding: 5px 10px;
-    /* border-right: 1px dotted #636363; */
+    border-right: 1px dotted #636363;
 }
 
 .profile__item--img img {

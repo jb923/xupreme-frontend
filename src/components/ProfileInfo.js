@@ -25,6 +25,7 @@ const ProfileInfo = props => {
             </div>
             <div className="profile__order-container">
                 <div className="profile__orders">Recent Orders:</div>
+                <div className="profile__container--outer">
                 {transactionArray.map((transaction, i) => {
                     return (
                         <div key={i} className="profile__transaction">
@@ -48,6 +49,7 @@ const ProfileInfo = props => {
                         </div>
                     )
                 })}
+                </div>
             </div>
         </>
     );

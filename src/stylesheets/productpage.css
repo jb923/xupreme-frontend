@@ -8,6 +8,7 @@
     height: 625px; */
     padding: 12px;
     margin-top: 12px;
+    margin-bottom: 24px;
 }
 
 .products__img img {
@@ -54,6 +55,14 @@
     margin: 24px auto;
 }
 
+.products__buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    margin: 12px auto;
+    /* justify-content: space-evenly; */
+}
+
 .products__cart {
     height: 24px;
     width: 100px;
@@ -82,11 +91,12 @@
     font-weight: bold;
     padding: .27273em 0;
     font-size: 12px;
+    margin-right: 12px;
 }
 
 
-.products__review-header {
+/* .products__review-header {
     background-color: #ffffff;
     margin-bottom: 24px;
-    /* padding: 16px; */
-}
+    padding: 16px;
+} */

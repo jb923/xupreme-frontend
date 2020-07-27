@@ -37,16 +37,20 @@ const ProductPage = (props) => {
         setSelectedSize(event.target.value)
     }
 
+    const handleKeepShopping = () => {
+        props.history.push('/all')
+    }
+
     let selectField;
     if (sizes[id]) {
         selectField = (
             <label className="products__label">size: 
                 <select className="products__size" placeholder="size"  onChange={handleChange}> 
                     <option value="">select size</option>
-                    <option value="small">small</option>
-                    <option value="medium">medium</option>
-                    <option value="large">large</option>
-                    <option value="xlarge">xlarge</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">Xlarge</option>
                 </select>
             </label>
         )} 
@@ -66,15 +70,16 @@ const ProductPage = (props) => {
                         <div className="products__color">{color}</div>
                         <div className="products__details">{description}</div>
                         <div className="products__price">${(price / 100)}</div>
-
-                        <form className="products__cart-container" onSubmit={handleSubmit}>
+                        <form className="products__cart-container" onSubmit={handleSubmit}> 
                             {selectField}
-                            <button className="products__cart">add to cart</button>
-                            <button className="products__shopping">keep shopping</button>
+                            <div className="products__buttons">
+                                <button className="products__shopping" onClick={handleKeepShopping}>keep shopping</button>
+                                <button className="products__cart">add to cart</button>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <div className="products__review-header">Reviews:</div>
+                {/* <div className="products__review-header">Reviews:</div> */}
                 {/* <ReviewDiv id={id} /> */}
 
             </div>

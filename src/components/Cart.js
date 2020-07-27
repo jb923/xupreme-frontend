@@ -45,6 +45,7 @@ const Cart = (props) => {
                     <div className="cart__header">Edit / View Cart</div>
                     <div className="checkout__header">Shipping / Payment</div>
                 </div>
+                <div className="cart__container--outer">
                 {targetProducts.map((product, i) => {
                     total += product.price;
                     return (
@@ -63,6 +64,7 @@ const Cart = (props) => {
                         </div>
                     );
                 })}
+                </div>
             </div>
             <div className="cart__lower">
                     <div className="cart__subtotal--container">

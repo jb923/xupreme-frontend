@@ -44,13 +44,15 @@
     font-weight: bold;
 }
 
-
+.cart__container--outer {
+    margin-top: 40px;
+}
 
 .cart__item--container {
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid #636363;
-    margin-top: 40px;
+    padding: 4px;
 }
 
 .cart__item--img {
@@ -63,6 +65,7 @@
     width: 100px;
     padding: 5px 10px;
     border-right: 1px dotted #636363;
+
 }
 
 .cart__item--img img {
