@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { GrLogout } from "react-icons/gr"
-import { logout } from "../actions/sessionActions";
+
 
 
 const ProfileInfo = props => {
@@ -19,15 +18,7 @@ const ProfileInfo = props => {
 
     return (
         <>
-            <div className="profile__userinfo">
-                <div className="profile__user--container">
-                    <img className="profile__pic" src={require("../assets/supremexlv.jpg")} alt="profile-logo" />
-                    <div className="profile__username">Supreme Team Member: {displayName}</div>
-                    <GrLogout className="profile__logout" onClick={props.logout}/>
-                </div>
-            </div>
             <div className="profile__order-container">
-                <div className="profile__orders">Recent Orders:</div>
                 <div className="profile__container--outer">
                 {transactionArray.map((transaction, i) => {
                     return (
@@ -70,7 +61,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        logout: () => dispatch(logout()),
+        // logout: () => dispatch(logout()),
     }
 }
 

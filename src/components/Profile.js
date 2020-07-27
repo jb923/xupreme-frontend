@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import { connect } from "react-redux";
 import { fetchTransaction } from "../actions/transactionActions";
+import { GrLogout } from "react-icons/gr"
+import { logout } from "../actions/sessionActions";
 
 import Header from "./Header";
 import NavMain from "./NavMain";
@@ -9,7 +11,7 @@ import ProfileInfo from "./ProfileInfo";
 
 const Profile = (props) => {
     const userId = props.userId;
-
+    const displayName = props.firstName === "demo" ? "Guest" : props.firstName === "null" ? "" : `${props.firstName} ${props.lastName}`;
 
     useEffect(() => {
         (async () => {
@@ -21,6 +23,14 @@ const Profile = (props) => {
     return (
         <>
         <Header />
+        <div className="profile__userinfo">
+            <div className="profile__user--container">
+                <img className="profile__pic" src={require("../assets/supremexlv.jpg")} alt="profile-logo" />
+                <div className="profile__username">Supreme Team Member: {displayName}</div>
+                <GrLogout className="profile__logout" onClick={props.logout}/>
+            </div>
+        </div>
+        <div className="profile__orders">Recent Orders:</div>
         <ProfileInfo {...props} />
         <NavMain />
         </>
@@ -41,6 +51,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchTransaction: (userId) => dispatch(fetchTransaction(userId)),
+        logout: () => dispatch(logout()),
     };
 };
 

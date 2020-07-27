@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { PrivateRoute, AuthRoute } from './utils/routeUtils';
+import { ProtectedRoute, AuthRoute } from './utils/routeUtils';
 import { loadToken } from "./actions/sessionActions";
 import { fetchProducts } from "./actions/productActions";
 import { fetchSizes } from "./actions/sizeActions";
@@ -27,6 +27,7 @@ import Profile from './components/Profile';
 
 
 const App = props => {
+
   useEffect(() => {
       props.loadToken();
   });
@@ -51,28 +52,38 @@ const App = props => {
   //     window.scrollTo(0, 0)
   // }, [])
 
+
   return (
       <BrowserRouter>
-          <Route path="/login" component={Login} />
-          <Route exact path="/" component={MainPage} />
-          <Route path="/shop" component={Shop} />
-          <Route path="/all" component={ViewAll} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/news" component={News} />
-          <Route path="/about" component={About} />
-          <Route path="/stores" component={Stores} />
-          <Route path="/product/:productId" component={ProductPage} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/category/:categoryId" component={ProductList} />
-          <Route path="/terms" component={Terms} />
-          <Route path="/privacy" component={Privacy} />
-          <Route path="/faq" component={Faq} />
-          <Route path="/checkout" component={Checkout} />
-          <PrivateRoute path="/profile" component={Profile} />
+        <Switch>
+            <Route path="/login" component={Login} />
+            <Route exact path="/" component={MainPage} />
+            <Route path="/shop" component={Shop} />
+            <Route path="/all" component={ViewAll} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/news" component={News} />
+            <Route path="/about" component={About} />
+            <Route path="/stores" component={Stores} />
+            <Route path="/product/:productId" component={ProductPage} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/category/:categoryId" component={ProductList} />
+            <Route path="/terms" component={Terms} />
+            <Route path="/privacy" component={Privacy} />
+            <Route path="/faq" component={Faq} />
+            <Route path="/checkout" component={Checkout} />
+            <ProtectedRoute path="/profile" isLoggedIn={props.token} component={Profile} />
+        </Switch>
       </BrowserRouter>
   );
 
 }
+
+const mapStateToProps = state => {
+  return {
+    token: state.session.token
+  };
+};
+
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -84,7 +95,7 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(
   App
