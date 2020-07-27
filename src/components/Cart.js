@@ -1,12 +1,11 @@
 import React, { useState} from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
 import Header from "./Header";
 import NavLower from "./NavLower";
 
 
 import { removeFromCart } from "../actions/cartActions";
-// import { fetchProducts } from "../actions/productActions"
+
 
 
 
@@ -35,7 +34,7 @@ const Cart = (props) => {
     const handleShopping = () => {
         props.history.push('/all')
     }
-
+    console.log(cartItemsArray)
 
     return (
         <>
@@ -90,7 +89,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // openModal: (modal) => dispatch(openModal(modal)),
         removeFromCart: (id) => dispatch(removeFromCart(id)),
  
     };

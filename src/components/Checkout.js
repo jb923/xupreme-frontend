@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { FaCreditCard } from 'react-icons/fa';
-// import { closeModal } from "../actions/modalActions";
 import { createTransaction } from "../actions/transactionActions";
 import Header from "./Header";
 import NavLower from "./NavLower";
@@ -20,7 +19,7 @@ const Checkout = (props) => {
     const handleClick = event => {
         props.createTransaction(userId, cartItems, total);
         window.localStorage.removeItem("supreme/cart");
-        props.setCartArray("");
+        // props.setCartArray("");
         props.history.push('/profile');
     }
 
@@ -32,8 +31,8 @@ const Checkout = (props) => {
     let total = 0;
     const targetProducts = cartItems.map(item => props.productsObj[item.product]);
     targetProducts.forEach(product => {total += product.price});
+    // console.log(targetProducts)
 
- 
 
     return (
         <>
@@ -98,7 +97,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        createTransaction: (userId, products, total) => dispatch(createTransaction(userId, products, total)),
+        createTransaction: (userId, cartItems, total) => dispatch(createTransaction(userId, cartItems, total)),
     };
 };
 
