@@ -30,11 +30,11 @@ const App = props => {
 
   useEffect(() => {
       props.loadToken();
-  });
+  },[]);
 
   useEffect(() => {
       props.loadCart();
-  });
+  },[]);
 
   useEffect(() => {
       (async () => {

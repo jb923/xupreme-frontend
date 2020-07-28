@@ -8,10 +8,12 @@ const cartReducer = (state = [], action) => {
     switch (action.type) {
         case ADD_TO_CART:
             newState.push(action.product)
+            window.localStorage.setItem("supreme/cart", JSON.stringify(newState))
             return newState;
 
         case REMOVE_FROM_CART:
-            newState = state.filter(item => item.productId !== action.id)
+            newState = state.filter(item => item.product !== parseInt(action.productId))
+            window.localStorage.setItem("supreme/cart", JSON.stringify(newState))
             return newState;
 
         case CREATE_TRANSACTION:
