@@ -17,7 +17,7 @@ const Profile = (props) => {
         (async () => {
             await props.fetchTransaction(userId);
         })();
-    });
+    },[userId]);
 
 
     return (
