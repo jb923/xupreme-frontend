@@ -19,7 +19,6 @@ const Checkout = (props) => {
     const handleClick = event => {
         props.createTransaction(userId, transactionItems, total);
         window.localStorage.removeItem("supreme/cart");
-        // props.setCartArray("");
         props.history.push('/profile');
     }
 

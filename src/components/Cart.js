@@ -26,7 +26,6 @@ const Cart = (props) => {
     const handleRemove = event => {
         event.preventDefault();
         props.removeFromCart(event.target.id);
-        // window.location.reload();
     }
 
     const handleCheckout = ()=>{
