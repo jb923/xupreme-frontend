@@ -59,7 +59,7 @@ const Cart = (props) => {
                                     <div className="cart__item--size">Size: {product.size} </div>
                                 </div>
                             </div>
-                            <button onClick={handleRemove} id={product.id} className="cart__item--remove">Remove</button>
+                            <button onClick={handleRemove} id={i} className="cart__item--remove">Remove</button>
                             <div className="cart__item--price">${(product.price / 100)}</div>
                         </div>
                     );
@@ -91,7 +91,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         removeFromCart: (id) => dispatch(removeFromCart(id)),
- 
+
     };
 };
 

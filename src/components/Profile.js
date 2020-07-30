@@ -11,14 +11,18 @@ import ProfileInfo from "./ProfileInfo";
 
 const Profile = (props) => {
     const userId = props.userId;
+    const products = props.products;
+    const total = props.total;
     const displayName = props.firstName === "demo" ? "Guest" : props.firstName === "null" ? "" : `${props.firstName} ${props.lastName}`;
 
     useEffect(() => {
         (async () => {
-            await props.fetchTransaction(userId);
+            await props.fetchTransaction(userId, products, total);
         })();
-    },[userId]);
+    },[userId, products, total]);
 
+    if (props.products.length === 0) return null;
+    // console.log(products)
 
     return (
         <>
@@ -42,15 +46,16 @@ const mapStateToProps = state => {
     return {
         userId: state.session.id,
         transactions: state.transactions,
-        productsList: state.products,
+        products: state.products,
         firstName: state.session.firstName,
-        lastName: state.session.lastName
+        lastName: state.session.lastName,
+        total: state.total,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchTransaction: (userId) => dispatch(fetchTransaction(userId)),
+        fetchTransaction: (userId, products, total) => dispatch(fetchTransaction(userId, products, total)),
         logout: () => dispatch(logout()),
     };
 };

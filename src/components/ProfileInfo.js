@@ -12,7 +12,6 @@ const ProfileInfo = props => {
     const products = props.products;
 
 
-
     return (
         <>
             <div className="profile__order-container">
