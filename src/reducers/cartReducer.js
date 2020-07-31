@@ -12,18 +12,10 @@ const cartReducer = (state = [], action) => {
             return newState;
 
         case REMOVE_FROM_CART:
-            // newState = state.filter(item => item.product !== parseInt(action.productId))
-            for (let i = 0; i < newState.length; i++) {
-                if (parseInt(newState[i], 10) === parseInt(action.productId, 10)) {
-                    newState.splice(i, 1)
-                    break;
-                }
-            }
+            newState.splice(action.i, 1)
             window.localStorage.setItem("supreme/cart", JSON.stringify(newState))
             return newState;
-            // window.localStorage.setItem("supreme/cart", JSON.stringify(newState))
-            // return newState;
-            // newState = state.filter(item => item.product !== parseInt(action.productId))
+
         case CREATE_TRANSACTION:
             return [];
 
@@ -31,6 +23,6 @@ const cartReducer = (state = [], action) => {
             return state;
     }
 }
-
+// console.log(state)
 
 export default cartReducer;
