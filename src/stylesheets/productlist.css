@@ -26,9 +26,9 @@
     margin: 2px 4px;
 }
 
-.product__list-product-img img:hover {
-    border: 1px solid #b5b5b5;
-}
+/* .product__list-product-img img:hover {
+    border: 0px solid transparent;
+} */
 
 .category__map--container {
     background-color: #ffffff;

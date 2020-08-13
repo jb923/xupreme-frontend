@@ -12,9 +12,9 @@ const NavLower = props => {
             <div className='nav-right'>
                 <NavLink className="navlower navlower__profile" to='/cart'>cart</NavLink>
                 <NavLink className="navlower navlower__viewall" to='/all'>view all</NavLink>
-                <NavLink className="navlower navlower__shop" to='/terms'>terms</NavLink>
-                <NavLink className="navlower navlower__stores" to='/privacy'>privacy</NavLink>
-                <NavLink className="navlower navlower__privacy" to='/faq'>f.a.q</NavLink>
+                {/* <NavLink className="navlower navlower__shop" to='/terms'>terms</NavLink> */}
+                <NavLink className="navlower navlower__stores" to='/privacy'>bio</NavLink>
+                <NavLink className="navlower navlower__privacy" to='/faq'>contact</NavLink>
             </div>
         </div>
     )
