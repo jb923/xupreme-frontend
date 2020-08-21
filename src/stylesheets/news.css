@@ -50,3 +50,17 @@
     text-align: left;
     max-width: 385px;
 }
+
+.about__bio {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.about__bio:hover {
+    font-family: 'Courier New', Courier, Monaco;
+    background-color: #ED1C24;
+    color: #ffffff;
+    padding: 1px;
+}

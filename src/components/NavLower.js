@@ -8,13 +8,14 @@ const NavLower = props => {
             <div className='home-left'>
                 <NavLink className="navlower navlower__home" to='/'>home</NavLink>
                 <NavLink className="navlower navlower__profile" to='/profile'>profile</NavLink>
+                <NavLink className="navlower navlower__profile" to='/cart'>cart</NavLink>
             </div>
             <div className='nav-right'>
-                <NavLink className="navlower navlower__profile" to='/cart'>cart</NavLink>
+                {/* <NavLink className="navlower navlower__profile" to='/cart'>cart</NavLink> */}
                 <NavLink className="navlower navlower__viewall" to='/all'>view all</NavLink>
                 {/* <NavLink className="navlower navlower__shop" to='/terms'>terms</NavLink> */}
-                <NavLink className="navlower navlower__stores" to='/privacy'>bio</NavLink>
-                <NavLink className="navlower navlower__privacy" to='/faq'>contact</NavLink>
+                <NavLink className="navlower navlower__stores" to='/bio'>bio</NavLink>
+                <NavLink className="navlower navlower__privacy" to='/contact'>contact</NavLink>
             </div>
         </div>
     )

@@ -20,8 +20,8 @@ import ProductPage from './components/ProductPage';
 import Cart from './components/Cart';
 import ProductList from './components/ProductList';
 import Terms from './components/Terms';
-import Privacy from './components/Privacy';
-import Faq from './components/Faq';
+import Bio from './components/Bio';
+import Contact from './components/Contact';
 import Checkout from './components/Checkout';
 import Profile from './components/Profile';
 
@@ -67,9 +67,9 @@ const App = props => {
             <Route path="/product/:productId" component={ProductPage} />
             <Route path="/cart" component={Cart} />
             <Route path="/category/:categoryId" component={ProductList} />
-            <Route path="/terms" component={Terms} />
-            <Route path="/privacy" component={Privacy} />
-            <Route path="/faq" component={Faq} />
+            {/* <Route path="/terms" component={Terms} /> */}
+            <Route path="/bio" component={Bio} />
+            <Route path="/contact" component={Contact} />
             <Route path="/checkout" component={Checkout} />
             <ProtectedRoute path="/profile" isLoggedIn={props.token} component={Profile} />
         </Switch>

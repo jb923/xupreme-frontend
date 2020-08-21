@@ -57,3 +57,84 @@
 .faq__heading {
     font-weight: bold;
 }
+
+.app-img{
+    height: 400px;
+    width: 100%
+}
+
+.heroku__link {
+    font-family: 'Courier New', Courier, Monaco;
+    text-decoration: none;
+    color: #000000;
+    padding: 2px;
+}
+
+.heroku__link:hover {
+    background-color: #ED1C24;
+    color: #ffffff;
+}
+
+.heroku__link img {
+    margin-top: 12px;
+}
+
+.contact__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+}
+
+.bio__contact {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.bio__contact:hover {
+    background-color: #ED1C24;
+    color: #ffffff;
+}
+
+.bio__github--img {
+    align-self: center;
+    padding: 4px;
+    margin-left: 4px;
+}
+
+.contact__link--contact {
+    font-family: 'Courier New', Courier, Monaco;
+    text-decoration: none;
+    color: #000000;
+    padding: 4px;
+}
+
+.contact__link--contact:hover {
+    background-color: #ED1C24;
+    color: #ffffff;
+}
+
+.contact__link--github {
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, Monaco;
+    text-decoration: none;
+    color: #000000;
+    padding: 4px;
+    width: 75px;
+}
+
+.contact__github--img {
+    align-self: center;
+    margin-left: 4px;
+    align-items: center;
+}
+
+.contact__link--github:hover {
+    background-color: #ED1C24;
+    color: #ffffff;
+}

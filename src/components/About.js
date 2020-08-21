@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import NavMain from './NavMain';
-
+import { NavLink } from "react-router-dom";
 
 const About = () => {
 
@@ -9,10 +9,11 @@ const About = () => {
         <>
             <Header />
             <div className="about__container">
-               <p>In August 2002, Xupreme opened its doors on App Steet in downtown Manhattan and became the home of New York City skate culture. At its core was a group of neighborhood kids, New York skaters, and local artists who became the store's staff, crew, and customers.</p>
-               <p>Xupreme grew to embody downtown culture, and play an integral part in its constatn regeneration. Skaters, punks, hip-hop heads -- the young counter culture at large -- all gravitated towards Xupreme.</p>
-               <p>While it developed into a downtown institution, Xupreme established itself as a brand known for its quality, style, and authenticity.</p>
-               <p>Over 25 years, Xupreme has expanded from its New York City origins into a global community; working with generations of artists, photographers, designers, musicians, filmmakers, and writers who defied conventions and contributed to its unique identity and attitude.</p>
+               <p>In August 2020, Xupreme was created by Johnny Bui as a passion project to recreate the Supreme's website by maintaining the overall essence and authenticity of the website's theme. At its core is a React front-end with a Python based, Flask back-end.</p>
+               <p>Xupreme is a full stack eCommerce website that emphasizes a user-friendly UI/UX, which allows you to browse the shop with ease and style.</p>
+               <p>Along with an extensive flask backend with SQL seeding, Xupreme has over 120 products that are rendered on the site.</p>
+               <p>Over the last year, I have sharpened my skills in many stacks such as React, Javascript, Python, NodeJS and more. With that knowledge, I am proud to present to you, Xupreme. If you are interested in learning more about me, or view my other projects please visit my bio page.</p>
+               <NavLink className='about__bio' to='/bio'>bio</NavLink>
             </div>
             <NavMain />
         </>
