@@ -11,7 +11,7 @@ import { removeFromCart } from "../actions/cartActions";
 
 const Cart = (props) => {
 
-    const userId = props.sessionId;
+    // const userId = props.sessionId;
     const cartItemsArray = props.cartItemsArray;
     const [cartArray, setCartArray] = useState(cartItemsArray); 
     if (props.products.length === 0) return null;

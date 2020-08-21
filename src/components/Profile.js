@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import { connect } from "react-redux";
+import { Redirect} from 'react-router-dom';
 import { fetchTransaction } from "../actions/transactionActions";
 import { GrLogout } from "react-icons/gr"
 import { logout } from "../actions/sessionActions";
@@ -22,8 +23,26 @@ const Profile = (props) => {
     },[userId, products, total]);
 
     if (props.products.length === 0) return null;
-    // console.log(products)
 
+    // if (!localStorage.getItem("supreme/authentication/token")) {
+    //     return <Redirect to="/" />
+    // } else {
+    //     return (
+    //         <>
+    //         <Header />
+    //         <div className="profile__userinfo">
+    //             <div className="profile__user--container">
+    //                 <img className="profile__pic" src={require("../assets/supremexlv.jpg")} alt="profile-logo" />
+    //                 <div className="profile__username">Xupreme Team Member: {displayName}</div>
+    //                 <GrLogout className="profile__logout" onClick={props.logout}/>
+    //             </div>
+    //         </div>
+    //         <div className="profile__orders">Recent Orders:</div>
+    //         <ProfileInfo {...props} />
+    //         <NavMain />
+    //         </>
+    //     )
+    // }
     return (
         <>
         <Header />
@@ -38,7 +57,6 @@ const Profile = (props) => {
         <ProfileInfo {...props} />
         <NavMain />
         </>
-
     )
 }
 

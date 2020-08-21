@@ -10,7 +10,7 @@ import NavUpper from "./NavUpper";
 import NavLower from "./NavLower";
 import { fetchReviews } from "../actions/reviewActions";
 import { addToCart } from "../actions/cartActions";
-import { fetchTransaction } from "../actions/transactionActions";
+// import { fetchTransaction } from "../actions/transactionActions";
 
 
 const ProductPage = (props) => {
