@@ -28,7 +28,6 @@ const ProfileInfo = props => {
                                         <div className="profile__item--description">
                                             <div className="profile__item--name">{products[item].name}
                                                 <div className="profile__item--color">Style: {products[item].color}</div>
-                                                {/* <div className="profile__item--size">Size: {products[item].size} </div> */}
                                                 <div className="profile__item--size">Price: ${(products[item].price)/100.00} </div>
                                             </div>
                                         </div>
