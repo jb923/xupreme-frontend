@@ -1,6 +1,6 @@
 # ***<img src='./src/assets/Xupreme-logo.png' width='100px'/> Xupreme***
 
-## Xupreme, a full stack fashion eCommerce platform!
+## Xupreme is a full stack fashion eCommerce platform!
 
 Xupreme is a full stack eCommerce website that emphasizes a user-friendly UI/UX, which allows you to browse the shop with ease and style.
 
@@ -23,19 +23,24 @@ Created with
     - Python/Flask
 
 
-## Features
+## MVP Features
 - A responsive carousel that exhibits features items in the shop page.
 - An extensive Python backend with SQL seeding that renders over 120 products on the site.
 - A login feature that uses BCrypt password hashing backend and Auth Routes in the frontend to prevent plain text password storage and ensure user privacy by restricting access to user specific site features.
 - Users can view the product page, and add the item to the cart for checkout
 
-## Code Highlights
-
-
-## Troubleshooting
+## Bonus/Stretch Goals
+- Users can leave reviews on the products.
 
 
 ## Database Schema
+
+<img src='xupreme-schema.png>
+
+## Code Highlights
+- The use of sizes for some of the products was a little tricky and required some data manipulation. It was a challange at first but I was able to get it down. It helped me understand the flow of data a little better throughout my project.
+
+
 
 
 ## Created By 
