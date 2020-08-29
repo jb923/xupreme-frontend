@@ -35,7 +35,7 @@ Created with
 
 ## Database Schema
 
-<img src='xupreme-schema.png>
+<img src='xupreme-schema.png'>
 
 ## Code Highlights
 - The use of sizes for some of the products was a little tricky and required some data manipulation. It was a challange at first but I was able to get it down. It helped me understand the flow of data a little better throughout my project.
