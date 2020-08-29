@@ -14,11 +14,20 @@ Note: The demo user profile is designed to be static and with reset to it's defa
 
 *Xupreme can be found at [https://xupreme.herokuapp.com/](https://xupreme.herokuapp.com/).*
 
+## Technologies Used
+Created with 
+    - Javascript ES6
+    - Postgres 
+    - Node.js
+    - BcryptJS
+    - Python/Flask
+
 
 ## Features
 - A responsive carousel that exhibits features items in the shop page.
 - An extensive Python backend with SQL seeding that renders over 120 products on the site.
 - A login feature that uses BCrypt password hashing backend and Auth Routes in the frontend to prevent plain text password storage and ensure user privacy by restricting access to user specific site features.
+- Users can view the product page, and add the item to the cart for checkout
 
 ## Code Highlights
 
