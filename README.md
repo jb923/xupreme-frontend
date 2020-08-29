@@ -16,10 +16,17 @@ Note: The demo user profile is designed to be static and with reset to it's defa
 
 ## Technologies Used
 Created with 
-    - Javascript ES6
+
+    - React
+
+    - Material UI
+
     - Postgres 
+
     - Node.js
+
     - BcryptJS
+
     - Python/Flask
 
 
