@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-// import { ProtectedRoute} from './utils/routeUtils';
+import { ProtectedRoute} from './utils/routeUtils';
 import { loadToken } from "./actions/sessionActions";
 import { fetchProducts } from "./actions/productActions";
 import { fetchSizes } from "./actions/sizeActions";
@@ -70,7 +70,7 @@ const App = props => {
             <Route path="/bio" component={Bio} />
             <Route path="/contact" component={Contact} />
             <Route path="/checkout" component={Checkout} />
-            <Route path="/profile" isLoggedIn={props.token} component={Profile} />
+            <ProtectedRoute path="/profile" isLoggedIn={props.token} component={Profile} />
         </Switch>
       </BrowserRouter>
   );
