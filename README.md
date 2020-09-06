@@ -28,6 +28,8 @@ Created with
     - BcryptJS
 
     - Python/Flask
+    
+    -SQL
 
 
 ## MVP Features
