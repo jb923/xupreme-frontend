@@ -29,7 +29,6 @@
 }
 
 .navupper__container {
-    /* background-color: #ffffff; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
